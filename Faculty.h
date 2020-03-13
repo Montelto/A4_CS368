@@ -11,13 +11,16 @@
 
 #include "Employee.h"
 
-int publications;
-
-class Faculty: private Employee {
+class Faculty: public Employee {
 private:
-    Faculty();
+    int publications;
 
-    void displayDetails();
+public:
+    Faculty();
+    Faculty(string name, int ID, classType type, vector<int> *courseId,
+            int officeNum, int publications);
+
+    void displayDetails() override;
 };
 
 #endif //A4_CS368_FACULTY_H

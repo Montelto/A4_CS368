@@ -12,14 +12,18 @@
 #include "Employee.h"
 #include "Student.h"
 
-int officeHours;
-int TAcourse;
-
-class TeachingAssistant: private Employee, Student {
+class TeachingAssistant: public Employee, Student  {
 private:
-    TeachingAssistant();
+    int officeHours;
+    int TAcourse;
 
-    void displayDetails();
+public:
+    TeachingAssistant();
+    TeachingAssistant(string name, int ID, classType type, vector<int>*
+            courseId, vector<float> *grade, int officeNum, int officeHours,
+            int TAcourse);
+
+    void displayDetails() override;
 };
 
 #endif //A4_CS368_TEACHINGASSISTANT_H

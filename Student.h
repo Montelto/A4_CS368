@@ -11,16 +11,19 @@
 
 #include "Person.h"
 
-vector<float>* grade;
-float average;
-
-class Student: private Person {
+class Student: virtual public Person {
 private:
-    Student();
-
-    void displayDetails();
+    vector<float>* grade;
+    float average;
 
     void calcAverage();
+
+public:
+    Student();
+    Student(string name, int ID, classType type, vector<int>* courseId,
+            vector<float> *grade);
+
+    virtual void displayDetails();
 };
 
 #endif //A4_CS368_STUDENT_H

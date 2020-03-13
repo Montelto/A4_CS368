@@ -17,16 +17,18 @@ using namespace std;
 
 enum class classType{PER, EMP, STU, FAC, TA};
 
-string name;
-int ID;
-classType type;
-vector<int>* courseId;
-
 class Person {
-protected:
-    Person();
+private:
+    string name;
+    int ID;
+    classType type;
+    vector<int>* courseId;
 
-    void virtual displayDetails();
+public:
+    Person();
+    Person(string name, int ID, classType type, vector<int>* courseId);
+
+    virtual void displayDetails();
 
     vector<int>* getCourseID();
 

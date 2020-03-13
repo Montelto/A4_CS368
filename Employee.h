@@ -11,13 +11,18 @@
 
 #include "Person.h"
 
-int officeNum;
-
-class Employee: private Person {
+class Employee: virtual public Person {
 private:
-    Employee();
+    int officeNum;
 
-    void virtual displayDetails();
+public:
+    Employee();
+    Employee(string name, int ID, classType type, vector<int>* courseId, int
+    officeNum);
+
+    virtual void displayDetails();
+
+    friend class TeachingAssistant;
 };
 
 #endif //A4_CS368_EMPLOYEE_H

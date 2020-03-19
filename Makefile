@@ -8,17 +8,23 @@ CXXFLAGS = -Wall
 
 A4_CSCS368: build
 
-Person.o: Person.h
+Person.o: Person.cpp Person.h
+	$(CXX) $(CXXFLAGS) -o Person.o Person.cpp
 
-Employee.o: Employee.h Person.h
+Employee.o: Employee.cpp Employee.h Person.h
+	$(CXX) $(CXXFLAGS) -o Employee.o Employee.cpp
 
-Student.o: Student.h Person.h
+Student.o: Student.cpp Student.h Person.h
+	$(CXX) $(CXXFLAGS) -o Student.o Student.cpp
 
-Faculty.o: Faculty.h Employee.h
+Faculty.o: Faculty.cpp Faculty.h Employee.h
+	$(CXX) $(CXXFLAGS) -o Faculty.o Faculty.cpp
 
-TeachingAssistant.o: TeachingAssistant.h Employee.h Student.h
+TeachingAssistant.o: TeachingAssistant.cpp TeachingAssistant.h Employee.h Student.h
+	$(CXX) $(CXXFLAGS) -o TeachingAssistant.o TeachingAssistant.cpp
 
-DisplayUtility.o: DisplayUtility.h Faculty.h TeachingAssistant.h
+DisplayUtility.o: DisplayUtility.cpp DisplayUtility.h Faculty.h TeachingAssistant.h
+	$(CXX) $(CXXFLAGS) -o DisplayUtility.o DisplayUtility.cpp
 
 clean:
 	-rm Person.o

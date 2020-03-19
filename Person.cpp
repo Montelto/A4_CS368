@@ -23,7 +23,6 @@ Person::Person(string name, int ID, vector<int> *courseId, classType type) {
 }
 
 void Person::displayDetails() {
-    cout << endl;
     switch (getClassType()) {
         case PER:
             cout << "Person" << endl;

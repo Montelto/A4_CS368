@@ -27,7 +27,7 @@ void Student::displayDetails() {
         const vector<float> &grades = *grade;
         for (int i = 0; i < courses.size() && i < grades.size();
              ++i) {
-            cout << courses[i] << ":" << grades[i];
+            cout << courses[i] << ":" << grades[i] << " ";
         }
     }
     cout << "\nAverage: " << average << endl;

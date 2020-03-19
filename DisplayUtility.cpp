@@ -10,7 +10,6 @@
 #include "DisplayUtility.h"
 
 void displayAllStudentNames (vector <Person *> v, int courseID){
-    cout << endl;
     for (auto person: v) {
         if (person->getClassType() == STU)
             for (auto course: *person->getCourseId()){
@@ -21,7 +20,6 @@ void displayAllStudentNames (vector <Person *> v, int courseID){
 }
 
 void displayAllPersonNames (vector <Person *> v, int courseID){
-    cout << endl;
     for (auto person: v) {
         for (auto course: *person->getCourseId()){
             if (course == courseID)

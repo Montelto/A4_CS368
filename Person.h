@@ -18,7 +18,7 @@ using namespace std;
 /*
  * Class Type fields to determine the persons belonging role.
  */
-enum class classType{PER, EMP, STU, FAC, TA};
+enum classType{PER, EMP, STU, FAC, TA};
 
 class Person {
     /*
@@ -46,7 +46,7 @@ public:
     /*
      * Person parametrized constructor
      */
-    Person(string name, int ID, classType type, vector<int>* courseId);
+    Person(string name, int ID, vector<int>* courseId, classType type);
 
     /*
      * a  pure  virtual  function  to  display  the  respective  class member
@@ -57,7 +57,7 @@ public:
     /*
      * a  getter  function  to  return  the  courseId  member variable
      */
-    vector<int>* getCourseID();
+    vector<int>* getCourseId();
 
     /*
      * a getter function to return the type member variable

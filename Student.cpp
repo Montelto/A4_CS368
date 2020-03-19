@@ -8,13 +8,13 @@
 
 #include "Student.h"
 
-Student::Student(): Person("Unknown student", -1, classType::STU, NULL) {
-    grade = NULL;
+Student::Student(): Person("Unknown student", -1, nullptr, STU) {
+    grade = nullptr;
     average = 0;
 }
 
-Student::Student(string name, int ID, classType type, vector<int> *courseId,
-                 vector<float> *grade): Person(name, ID, type, courseId) {
+Student::Student(string name, int ID, vector<int> *courseId, classType type,
+                 vector<float> *grade): Person(name, ID, courseId, type) {
     this->grade = grade;
     calcAverage();
 }
@@ -22,8 +22,8 @@ Student::Student(string name, int ID, classType type, vector<int> *courseId,
 void Student::displayDetails() {
     Person::displayDetails();
     cout << "Courses and grades: ";
-    if (Student::getCourseID() != NULL && grade != NULL) {
-        const vector<int> &courses = *Student::getCourseID();
+    if (getCourseId() != nullptr && grade != nullptr) {
+        const vector<int> &courses = *getCourseId();
         const vector<float> &grades = *grade;
         for (int i = 0; i < courses.size() && i < grades.size();
              ++i) {
@@ -36,7 +36,7 @@ void Student::displayDetails() {
 void Student::calcAverage() {
     float total = 0;
     float numGrades = 0;
-    if (grade != NULL)
+    if (grade != nullptr)
         for (auto itr : *grade) {
             total += itr;
             numGrades += 1;

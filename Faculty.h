@@ -33,7 +33,7 @@ public:
     /*
      * Person parametrized constructor
      */
-    Faculty(string name, int ID, classType type, vector<int> *courseId,
+    Faculty(string name, int ID, vector<int> *courseId, classType type,
             int officeNum, int publications);
 
     /*

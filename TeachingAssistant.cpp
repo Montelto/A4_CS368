@@ -9,18 +9,18 @@
 
 #include "TeachingAssistant.h"
 
-TeachingAssistant::TeachingAssistant(): Student("Unknown TA", -1,
-        classType::TA, NULL, NULL), Employee("Unknown TA", -1, classType::TA,
-                NULL, 0), Person("Unknown TA", -1, classType::TA, NULL)  {
+TeachingAssistant::TeachingAssistant(): Student("Unknown TA", -1, nullptr, TA,
+        nullptr), Employee("Unknown TA", -1,
+                nullptr, TA, 0), Person("Unknown TA", -1, nullptr, TA)  {
     officeHours = 0;
     TAcourse = 0;
 }
 
-TeachingAssistant::TeachingAssistant(string name, int ID, classType type,
-        vector<int> *courseId, vector<float> *grade, int officeNum, int
-        officeHours, int TAcourse): Student (name, ID, type, courseId, grade)
-        , Employee(name, ID, type, courseId, officeNum), Person(name, ID,
-                type, courseId) {
+TeachingAssistant::TeachingAssistant(string name, int ID, vector<int>
+        *courseId, classType type, vector<float> *grade, int officeNum, int
+        officeHours, int TAcourse): Student (name, ID, courseId, type, grade)
+        , Employee(name, ID, courseId, type, officeNum), Person(name, ID,
+                courseId, type) {
     this->officeHours = officeHours;
     this->TAcourse = TAcourse;
 }

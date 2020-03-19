@@ -39,7 +39,7 @@ public:
     /*
      * Person parametrized constructor
      */
-    Student(string name, int ID, classType type, vector<int>* courseId,
+    Student(string name, int ID, vector<int> *courseId, classType type,
             vector<float> *grade);
 
     /*

@@ -12,8 +12,8 @@
 void displayAllStudentNames (vector <Person *> v, int courseID){
     cout << endl;
     for (auto person: v) {
-        if (person->getClassType() == classType::STU)
-            for (auto course: *person->getCourseID()){
+        if (person->getClassType() == STU)
+            for (auto course: *person->getCourseId()){
                 if (course == courseID)
                     cout << person->getName() << endl;
             }
@@ -23,7 +23,7 @@ void displayAllStudentNames (vector <Person *> v, int courseID){
 void displayAllPersonNames (vector <Person *> v, int courseID){
     cout << endl;
     for (auto person: v) {
-        for (auto course: *person->getCourseID()){
+        for (auto course: *person->getCourseId()){
             if (course == courseID)
                 cout << person->getName() << endl;
         }

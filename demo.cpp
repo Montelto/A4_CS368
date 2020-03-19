@@ -27,25 +27,25 @@ int main() {
     TeachingAssistant teachingAssistantD;
     teachingAssistantD.displayDetails();
 
-    auto *courses = new vector<int>;
+    auto courses = new vector<int>;
     courses->push_back(368);
 
-    Person person("Peeps, The", 1, classType::PER, courses);
+    Person person("Peeps, The", 1, courses, PER);
     person.displayDetails();
 
-    Employee employee("Jo, Worker", 2, classType::EMP, courses, 10);
+    Employee employee("Jo, Worker", 2, courses, EMP, 10);
     employee.displayDetails();
 
     auto *grades = new vector<float>;
     grades->push_back(100);
 
-    Student student("Ning, Lear", 3, classType::STU, courses, grades);
+    Student student("Ning, Lear", 3, courses, STU, grades);
     student.displayDetails();
 
-    Faculty faculty("Fessor, Pro", 4, classType::FAC, courses, 20, -1);
+    Faculty faculty("Fessor, Pro", 4, courses, FAC, 20, -1);
     faculty.displayDetails();
 
-    TeachingAssistant teachingAssistant("Tor, Tu", 5, classType::TA, courses,
+    TeachingAssistant teachingAssistant("Tor, Tu", 5, courses, TA,
             grades, 30, 1200, 200);
     teachingAssistant.displayDetails();
 

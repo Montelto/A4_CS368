@@ -8,12 +8,12 @@
 
 #include "Employee.h"
 
-Employee::Employee(): Person("Unknown employee", -1, classType::EMP, NULL) {
+Employee::Employee(): Person("Unknown employee", -1, nullptr, EMP) {
     officeNum = 0;
 }
 
-Employee::Employee(string name, int ID, classType type, vector<int> *courseId,
-                   int officeNum): Person(name, ID, type, courseId) {
+Employee::Employee(string name, int ID, vector<int> *courseId, classType type,
+                   int officeNum): Person(name, ID, courseId, type) {
     this->officeNum = officeNum;
 }
 

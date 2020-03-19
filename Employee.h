@@ -32,7 +32,7 @@ public:
     /*
      * Person parametrized constructor
      */
-    Employee(string name, int ID, classType type, vector<int>* courseId, int
+    Employee(string name, int ID, vector<int> *courseId, classType type, int
     officeNum);
 
     /*

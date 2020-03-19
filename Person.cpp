@@ -11,35 +11,33 @@
 Person::Person() {
     name = "Unknown person";
     ID = -1;
-    courseId = NULL;
-    type = classType::PER;
+    courseId = nullptr;
+    type = PER;
 }
 
-Person::Person(string name, int ID, classType type, vector<int> *courseId) {
+Person::Person(string name, int ID, vector<int> *courseId, classType type) {
     this->name = name;
     this->ID = ID;
     this->type = type;
     this->courseId = courseId;
 }
 
-
-
 void Person::displayDetails() {
     cout << endl;
     switch (getClassType()) {
-        case classType::PER:
+        case PER:
             cout << "Person" << endl;
             break;
-        case classType::EMP:
+        case EMP:
             cout << "Employee" << endl;
             break;
-        case classType::STU:
+        case STU:
             cout << "Student" << endl;
             break;
-        case classType::FAC:
+        case FAC:
             cout << "Faculty" << endl;
             break;
-        case classType::TA:
+        case TA:
             cout << "TA" << endl;
             break;
     }
@@ -47,7 +45,7 @@ void Person::displayDetails() {
     cout << "ID: " << ID << endl;
 }
 
-vector<int>* Person::getCourseID() {
+vector<int>* Person::getCourseId() {
     return courseId;
 }
 

@@ -38,8 +38,8 @@ public:
     /*
      * Person parametrized constructor
      */
-    TeachingAssistant(string name, int ID, classType type, vector<int>*
-            courseId, vector<float> *grade, int officeNum, int officeHours,
+    TeachingAssistant(string name, int ID, vector<int> *courseId, classType
+    type, vector<float> *grade, int officeNum, int officeHours,
             int TAcourse);
 
     /*

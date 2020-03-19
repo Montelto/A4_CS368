@@ -5,39 +5,38 @@
 
 *Created in CLion and pushed to Github*
 
-SummarizeGrades consists of 3 files:
- SummarizeGrades.h, SummarizeGrades.cpp, and demo.cpp. The first being the
-  header file, the second being the implementation of the student grades
-   modification functions, and the third being the main() function
-    implementation to test these modification functions.
+A4_CS368 is made up of 13 files; Person.h, Person.cpp,  Employee.cpp
+, Employee.h, Student.cpp, Student.h, Faculty.cpp, Faculty.h
+, TeachingAssistant.cpp, TeachingAssistant.h, DisplayUtility.h
+, DisplayUtility.cpp, demo.cpp
     
-SummarizeGrades.h includes fstream for file reading and writing , vector for
- use of datatype, map for use of datatype, iomanip for setw and setpresision
- , and iostream for demo to output to the console after file is initially
-  read. Namespace std is used for ease of coder. Struct Name is used to store
-   the first and last name of each student together.
+Person.h/Person.cpp are the base with base class Person with data members
+ name, ID, type, and courseID, a default and parametrized constructor, a
+  display details function, and getter functions to allow access to data
+   members.
 
-SummarizeGrades.cpp is organized, readGradeFile() takes the path of the input
- file and references to some data structures that will hold the student names
-  and scores for other functions to process. It also contains pointers to
-   variables that will keep track of the number of students and assignments
-   . formatCaseOfNames() takes the student names map and changes the first
-    and last name strings in the struct(values in map) so that the first
-     letter of each string is a capital letter and all other letters are
-      lower case. computeTotalAndPercent() takes the scores map and computes
-       the total score (the sum of all points earned) as well as the final
-        percentage as a float and stores these computed results in total and
-         percent maps respectively where key is the student ID
-         . writeFormattedGrades() takes the path of the output file and
-          references to some data structures  that holds the student names
-          , scores, and percents and writes them to output file. It write to
-           the file in a formatted form so that the first letter in every
-            last name, the one digit in score, and decimal point in
-             percentage are aligned respectively for all students.
-
-demo.cpp executes a test for SummarizeGrades.cpp by calling all functions in
- order to create a properly formatted output file. Prints to console after
-  initial readGradeFile to ensure file was read correctly and values were
-   placed in correct locations.
+Employee.h/Employee.cpp with class Employee that inherits from Person has
+ extra data member officeNum, default and parametrized constructor, and a
+  display details function.
+  
+Student.h/Student.cpp with class Student that inherits form Person has extra
+ data members grade and average, default and parametrized constructor, a
+  display details function, and calc average private function.
+  
+Faculty.h/Faculty.cpp with class Faculty that inherits from Employee has
+ extra data member publications, default and parametrized constructor, and a
+  display details function.
+ 
+TeachingAssistant.h/TeachingAssistant.cpp with class TeachingAssistant that
+ inherits from Employee and Student has the extra data members officeHours
+  and TAcourse, default and parametrized constructor, and a display details
+   function.
    
-**make SummarizeGrades** 
+DisplayUtility.h/DisplayUtility.cpp displays either all persons or only
+ students who are associated with a given courseID with functions
+  displayAllStudentNames and displayAllPersonNames respectively.
+
+demo.cpp executes a test for all of A4_CS368 by calling all functions in
+ order to create a properly formatted output file.
+   
+**make A4_CS368** 

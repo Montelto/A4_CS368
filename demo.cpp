@@ -8,6 +8,9 @@
 
 #include "DisplayUtility.h"
 
+/*
+ * to test each function in all of A4_CS368
+ */
 int main() {
     Person personD;
     personD.displayDetails();

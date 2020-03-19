@@ -13,16 +13,39 @@
 
 class Student: virtual public Person {
 private:
+    /*
+     * grade for grades given
+     * average for mean of the grades given
+     */
     vector<float>* grade;
     float average;
 
+    /*
+     *  a private function to calculate the average of the grades
+     */
     void calcAverage();
 
 public:
+    /*
+     * Person constructor with the following values as default arguments:
+     * Name : Unknown student
+     * ID : -1
+     * courseId : nullptr
+     * type : STU
+     * grade : nullptr
+     */
     Student();
+
+    /*
+     * Person parametrized constructor
+     */
     Student(string name, int ID, classType type, vector<int>* courseId,
             vector<float> *grade);
 
+    /*
+     * to  display  the  respective  class  member  variables  (displays
+     * name, ID, type, courses, grades, average)
+     */
     virtual void displayDetails();
 };
 

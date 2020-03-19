@@ -13,13 +13,33 @@
 
 class Faculty: public Employee {
 private:
+    /*
+     * publications for number of publications made by this person
+     */
     int publications;
 
 public:
+    /*
+     * Person constructor with the following values as default arguments:
+     * Name : Unknown faculty
+     * ID : -1
+     * courseId :nullptr
+     * type : FAC
+     * officeNum : 0
+     * publications : 0
+     */
     Faculty();
+
+    /*
+     * Person parametrized constructor
+     */
     Faculty(string name, int ID, classType type, vector<int> *courseId,
             int officeNum, int publications);
 
+    /*
+     * o  display  the  respective  class  member  variables  (displays name,
+     * ID, type, courses, officeNum, publications)
+     */
     void displayDetails() override;
 };
 
